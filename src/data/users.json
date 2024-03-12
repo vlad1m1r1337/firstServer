@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "email": "lol.com"
+  },
+  {
+    "id": 2,
+    "name": "Jane Doe",
+    "email": "lol.com"
+  },
+  {
+    "id": 3,
+    "name": "John Smith",
+    "email": "lol.com"
+  },
+  {
+    "id": 4,
+    "name": "Jane Smith",
+    "email": "lol.com"
+  }
+]
