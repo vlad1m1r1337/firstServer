@@ -6,7 +6,18 @@ const { URLSearchParams } = require('url');
 const server = http.createServer((req, res) => {
     const parsedUrl = url.parse(req.url, true);
     const searchParams = new URLSearchParams(parsedUrl.query);
-    console.log(searchParams.get('hello'));
+    console.log(parsedUrl.query);
+
+    for (const key of searchParams.keys()) {
+        if (key !== 'hello' && key !== 'users') {
+            res.statusCode = 500;
+            res.statusMessage = "Bad Request";
+            res.header = "Content-Type: text/plain";
+            res.write("");
+            res.end();
+            return;
+        }
+    }
 
     if (searchParams.get('hello') !== null) {
         if (parsedUrl.query.hello) {
